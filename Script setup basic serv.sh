@@ -1,7 +1,6 @@
 #!/bin/bash
 
-ip=10.10.10.13
-mask="/24"
+ip="10.10.10.13/24"
 dns1=10.10.10.11
 dns2=10.10.10.2
 gateway=10.10.10.2
@@ -19,7 +18,7 @@ iface lo inet loopback
 
 allow-hotplug ens32
 iface ens32 inet static
-    address '$ip$maks'
+    address '$ip'
     gateway '$gateway'
     dns-nameservers '$dns1'
     dns-nameservers '$dns2'
