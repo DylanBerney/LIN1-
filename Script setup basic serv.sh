@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo chmod 777 hostname 
+sudo chmod 777 /etc/hostname 
 cat > /etc/hostanme <<EOF
 SRV-LIN-02
 EOF
