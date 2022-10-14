@@ -19,7 +19,7 @@ iface lo inet loopback
 
 allow-hotplug ens32
 iface ens32 inet static
-    address '$ip'
+    address '$ip$maks'
     gateway '$gateway'
     dns-nameservers '$dns1'
     dns-nameservers '$dns2'
