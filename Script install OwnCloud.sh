@@ -1,5 +1,10 @@
 #! /bin/bash
 
+#Password OwnCloud Admin and DB
+
+sec_db_pwd="Password"
+sec_admin_pwd="Password"
+
 #Variable for the domain name of the machine
 
 my_domain="SRV-LIN-02"
@@ -101,11 +106,6 @@ wget https://download.owncloud.com/server/stable/owncloud-complete-latest.tar.bz
 tar -xjf owncloud-complete-latest.tar.bz2 && \
 chown -R www-data. owncloud
 
-#Password OwnCloud Admin and DB
-
-sec_db_pwd="Password"
-sec_admin_pwd="Password"
-
 #Install OwnCloud
 
 occ maintenance:install \
@@ -125,6 +125,7 @@ my_ip="10.10.10.12"
 
 occ config:system:set trusted_domains 1 --value="$my_ip"
 occ config:system:set trusted_domains 2 --value="$my_domain"
+occ config:system:set trusted_domains 3 --value="www.lin1.local"
 
 
 
